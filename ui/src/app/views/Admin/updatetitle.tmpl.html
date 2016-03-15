@@ -1,0 +1,156 @@
+
+
+<form name="titleForm" ng-submit="titlesVm.submit()" novalidate>
+    <input type="hidden" ng-model="titlesVm.title.titleId"/>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" required class="form-control" id="title" placeholder="Enter Title here" ng-model="titlesVm.title.titleI">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" name="year" required class="form-control" id="year" placeholder="Enter year here" ng-model="titlesVm.title.year">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="rated">Rated</label>
+        <input type="text" name="rated" required class="form-control" id="rated" placeholder="Enter rated by whom here" ng-model="titlesVm.title.rated">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="released">Released</label>
+        <input type="text" name="released" required class="form-control" id="released" placeholder="Enter released date" ng-model="titlesVm.title.released">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="runtime">Runtime</label>
+        <input type="text" name="runtime" required class="form-control" id="runtime" placeholder="Enter time of movie or series" ng-model="titlesVm.title.runtime">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" required class="form-control" id="genre" placeholder="Enter genre of movie or series" ng-model="titlesVm.title.genre">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="director">Director</label>
+        <input type="text" name="director" required class="form-control" id="director" placeholder="Enter director of movie or series" ng-model="titlesVm.title.director">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="writer">Writer</label>
+        <input type="text" name="writer" required class="form-control" id="writer" placeholder="Enter writer of movie or series" ng-model="titlesVm.title.writer">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="actors">Actors</label>
+        <input type="text" name="actors" required class="form-control" id="actors" placeholder="Enter actors of movie or series" ng-model="titlesVm.title.actors">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="plot">Plot</label>
+        <input type="text" name="plot" required class="form-control" id="plot" placeholder="Enter plot of movie or series" ng-model="titlesVm.title.plot">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="language">Language</label>
+        <input type="text" name="language" required class="form-control" id="language" placeholder="Enter language of movie or series" ng-model="titlesVm.title.language">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" name="country" required class="form-control" id="country" placeholder="Enter released in country of movie or series" ng-model="titlesVm.title.country">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="awards">awards</label>
+        <input type="text" name="awards" required class="form-control" id="awards" placeholder="Enter awards won by that movie or series" ng-model="titlesVm.title.awards">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="poster">Poster</label>
+        <input type="text" name="poster" required class="form-control" id="poster" placeholder="Enter url of poster of movie or series" ng-model="titlesVm.title.poster">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="metascore">Metascore</label>
+        <input type="text" name="metascore" required class="form-control" id="metascore" placeholder="Enter metascore of movie or series" ng-model="titlesVm.title.metascore">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="imdbRating">imdbRating</label>
+        <input type="text" name="imdbRating" required class="form-control" id="imdbRating" placeholder="Enter imdbRating of movie or series" ng-model="titlesVm.title.imdbRating">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="imdbVotes">imdbVotes</label>
+        <input type="text" name="imdbVotes" required class="form-control" id="imdbVotes" placeholder="Enter imdbVotes of movie or series" ng-model="titlesVm.title.imdbVotes">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="imdbID">imdbID</label>
+        <input type="text" name="imdbID" required class="form-control" id="imdbID" placeholder="Enter imdbID of movie or series" ng-model="titlesVm.title.imdbID">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+    <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" name="type" required class="form-control" id="type" placeholder="Enter type" ng-model="titlesVm.title.type">
+        <!--<div class="error" ng-messages="addUserForm.name.$error" ng-if="addUserForm.name.$dirty">
+        </div>-->
+    </div>
+
+    <!--<div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" required class="form-control" id="email" placeholder="example@domain.com" ng-model="mainVm.newUser.email">
+      <div class="error" ng-messages="addUserForm.email.$error"  ng-if="addUserForm.email.$dirty">
+        <p ng-message="required">Email is required</p>
+        <p ng-message="email">Email is invalid</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="text" name="company" required class="form-control" id="company" placeholder="ABC Corp" ng-model="mainVm.newUser.company.name">
+      <div class="error"  ng-messages="addUserForm.company.$error"  ng-if="addUserForm.company.$dirty">
+        <p ng-message="required">Company is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" name="city" required class="form-control" id="city" placeholder="Your City" ng-model="mainVm.newUser.address.city">
+      <div class="error" ng-messages="addUserForm.city.$error" ng-if="addUserForm.city.$dirty">
+        <p ng-message="required">City is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" required pattern="[0-9]{10}" class="form-control" id="phone" placeholder="Your Phone" ng-model="mainVm.newUser.phone">
+      <div class="error" ng-messages="addUserForm.phone.$error" ng-if="addUserForm.phone.$dirty">
+        <p ng-message="required">Phone is required</p>
+        <p ng-message="pattern">Phone must be 10 digits.</p>
+      </div>
+    </div>-->
+    <div>
+        <!-- <button ng-if="!titlesVm.update" type="submit" class="btn btn-primary">Add Title</button>
+         <button ng-if="titlesVm.update" type="submit" class="btn btn-primary">Update Title</button>-->
+        <input type="submit"  value="Update" class="btn btn-primary btn-sm" ng-disabled="titleForm.$invalid">
+        <!-- <button type="button" ng-click="crudVm.reset(titlesVm.title.titleId)" class="btn btn-primary" ng-disabled="titleForm.$pristine">Reset</button>-->
+    </div>
+</form>
