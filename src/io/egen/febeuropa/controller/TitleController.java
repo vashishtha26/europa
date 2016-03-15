@@ -75,19 +75,19 @@ public class TitleController {
 		service.deleteTitle(titleId);
 	}
 
-	@RequestMapping(value="{type}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="type/{type}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value="Find that is it a movie or series?",
 	notes="Returns either all movies or series!")
 	public List<Title> findByType (@RequestParam(required=true,value="Type") String type) {
 		return service.findByType(type);
 	}
-	@RequestMapping(value="{year}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="year/{year}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value="Find movies and series in a particular year",
 	notes="Returns all movies and series in same year!")
 	public List<Title> findByYear (@RequestParam(required=true,value="Year") String year) {
 		return service.findByYear(year);
 	}
-	@RequestMapping(value="{genre}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="genre/{genre}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value="Find movies and series in a particular genre",
 	notes="Returns all movies and series in same genre!")
 	public List<Title> findByGenre (@RequestParam(required=true,value="Genre") String genre) {
