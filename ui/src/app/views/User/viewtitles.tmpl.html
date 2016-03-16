@@ -1,27 +1,40 @@
-<div class="thumbnail" ng-repeat="title in userViewVm.titles">
-    <a href="#/titles/{{title.titleId}}" ng-click="userViewVm.getTitles()"><img ng-src="{{title.poster}}" ng-click="title-detail.tmpl.html"></a>
+<div class="container-fluid">
+<div id="search">
+
+    <fieldset>
+        <legend>Sort:</legend>
+        <label> Sort by:</label>
+            <button id="sort" ng-click="userViewVm.sortByYear()">sort by year</button>
+            <button id="sort" ng-click="userViewVm.sortByImdbRating()">sort by imdbRating</button>
+            <button id="sort" ng-click="userViewVm.sortByImdbVotes()">sort by imdbVotes</button>
+        <!--<i class="glyphicon glyphicon-search"></i>-->
+            <hr/>
+           <!-- <label>Search by:</label>
+            <button id="find" ng-click="userViewVm.findByYear({{userViewVm.titles.year}})">search by year</button>
+            <button id="find" ng-click="userViewVm.findByGenre({{userViewVm.titles.genre}})">search by genre</button>
+            <button id="find" ng-click="userViewVm.findByType({{userViewVm.titles.type}})">search by type</button>
+            <hr>-->
+    </fieldset>
+</div>
+<br/>
+<br/>
+
+<div class="thumbnail" ng-repeat="title in userViewVm.titles | limitTo:6:(userViewVm.currentPage*6)">
+    <a href="#/titles/{{title.titleId}}" ng-click="userViewVm.getTitles()"><img ng-src="{{title.poster}}" alt="poster not available" ng-click="title-detail.tmpl.html"></a>
     <div class="caption">
         <h4>{{title.title}}</h4>
+        <p><b>imdbRatings:</b>{{title.imdbRating}}</p>
+        <p><b>imdbVotes:</b>{{title.imdbVotes}}</p>
         <p><b>Year:</b>{{title.year}}</p>
-        <!-- <p><b>Rated:</b>{{title.rated}}</p>
-         <p><b>Released:</b>{{title.released}}</p>
-         <p><b>Runtime:</b>{{title.runtime}}</p>
-         <p><b>Genre:</b>{{title.genre}}</p>
-         <p><b>Director:</b>{{title.director}}</p>
-         <p><b>Writer:</b>{{title.writer}}</p>
-         <p><b>Actors:</b>{{title.actors}}</p>
-         <p><b>Plot:</b>{{title.plot}}</p>
-         <p><b>Language:</b>{{title.language}}</p>
-         <p><b>Country:</b>{{title.country}}</p>
-         <p><b>Awards:</b>{{title.awards}}</p>
-         <p><b>Metascore:</b>{{title.metascore}}</p>
-         <p><b>imdbRating:</b>{{title.imdbRating}}</p>
-         <p><b>imdbVotes:</b>{{title.imdbVotes}}</p>
-         <p><b>imdbID:</b>{{title.imdbID}}</p>-->
-        <p><b>Type:</b>{{title.type}}</p>
-<!--        <i  ng-click="titlesVm.remove(title.titleId)" class="glyphicon glyphicon-trash"></i></button>
-        <a ng-href="#/addtitle" ng-click="titlesVm.edit(title.titleId)"><i  class="glyphicon glyphicon-pencil"></i></a>-->
-        <!-- <button type="button" ng-click="ctrl.edit(u.id)" class="btn btn-success custom-width">Edit</button>
-         <button type="button" ng-click="ctrl.remove(u.id)" class="btn btn-danger custom-width">Remove</button>-->
+    </div>
+</div>
+
+<div class="row">
+    <uib-pagination total-items="userViewVm.totalItems"
+               items-per-page="6"
+               ng-model="userViewVm.currentPage"
+                    max-size="2" rotate="false">
+
+    </uib-pagination>
     </div>
 </div>

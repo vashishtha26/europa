@@ -27,7 +27,7 @@
                            return response.data;
                         },
                         function(errResponse){
-                            console.error('Error while fetching Currencies');
+                            console.error('Error while fetching detabase');
                             return $q.reject(errResponse);
                         }
                     );

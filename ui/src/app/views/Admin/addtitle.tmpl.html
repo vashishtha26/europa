@@ -1,16 +1,4 @@
-<!--
-<h1>Photos</h1>
-
-<div class="row">
-  <div>
-    <uib-pagination total-items="photosVm.totalItems" max-size="5" boundary-links="true" ng-model="photosVm.currentPage" rotate="false" ng-change="photosVm.pageChanged()"></uib-pagination>
-  </div>
-  <div class="col-sm-3" ng-repeat="photo in photosVm.photos | limitTo:10:photosVm.currentPage*10">
-    <img class="img-responsive" ng-src="{{photo.url}}">
-  </div>
-</div>
-
--->
+<div class="container-fluid">
 
 <form name="titleForm" ng-submit="titlesVm.submit()" novalidate>
 
@@ -129,36 +117,6 @@
     </div>-->
   </div>
 
-  <!--<div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" name="email" required class="form-control" id="email" placeholder="example@domain.com" ng-model="mainVm.newUser.email">
-    <div class="error" ng-messages="addUserForm.email.$error"  ng-if="addUserForm.email.$dirty">
-      <p ng-message="required">Email is required</p>
-      <p ng-message="email">Email is invalid</p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="company">Company</label>
-    <input type="text" name="company" required class="form-control" id="company" placeholder="ABC Corp" ng-model="mainVm.newUser.company.name">
-    <div class="error"  ng-messages="addUserForm.company.$error"  ng-if="addUserForm.company.$dirty">
-      <p ng-message="required">Company is required</p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="city">City</label>
-    <input type="text" name="city" required class="form-control" id="city" placeholder="Your City" ng-model="mainVm.newUser.address.city">
-    <div class="error" ng-messages="addUserForm.city.$error" ng-if="addUserForm.city.$dirty">
-      <p ng-message="required">City is required</p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone</label>
-    <input type="text" name="phone" required pattern="[0-9]{10}" class="form-control" id="phone" placeholder="Your Phone" ng-model="mainVm.newUser.phone">
-    <div class="error" ng-messages="addUserForm.phone.$error" ng-if="addUserForm.phone.$dirty">
-      <p ng-message="required">Phone is required</p>
-      <p ng-message="pattern">Phone must be 10 digits.</p>
-    </div>
-  </div>-->
   <div>
    <!-- <button ng-if="!titlesVm.update" type="submit" class="btn btn-primary">Add Title</button>
     <button ng-if="titlesVm.update" type="submit" class="btn btn-primary">Update Title</button>-->
@@ -166,3 +124,4 @@
       <!-- <button type="button" ng-click="crudVm.reset(titlesVm.title.titleId)" class="btn btn-primary" ng-disabled="titleForm.$pristine">Reset</button>-->
   </div>
 </form>
+</div>

@@ -14,7 +14,7 @@
                             return response.data;
                         },
                         function(errResponse){
-                            console.error('Error while fetching titles');
+                            console.error('Error while fetching database');
                             return $q.reject(errResponse);
                         }
                     );
@@ -27,7 +27,7 @@
                             return response.data;
                         },
                         function(errResponse){
-                            console.error('Error while creating user');
+                            console.error('Error while creating title');
                             return $q.reject(errResponse);
                         }
                     );
@@ -40,7 +40,7 @@
                             return response.data;
                         },
                         function(errResponse){
-                            console.error('Error while updating user');
+                            console.error('Error while updating title');
                             return $q.reject(errResponse);
                         }
                     );
@@ -53,7 +53,7 @@
                             return response. data;
                         },
                         function(errResponse){
-                            console.error('Error while deleting user');
+                            console.error('Error while deleting title');
                             return $q.reject(errResponse);
                         }
                     );

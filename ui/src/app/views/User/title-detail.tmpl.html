@@ -1,28 +1,83 @@
-
-<div class="col-sm-3">
+<div class="container-fluid">
+<div id="poster-size" class="col-sm-3">
     <img ng-src="{{titleDetailVm.title.poster}}">
 </div>
-    <div class="col-sm-9">
-        <h4>{{titleDetailVm.title.title}}</h4>
-        <p><b>Year:</b>{{titleDetailVm.title.year}}</p>
-        <p><b>Rated:</b>{{titleDetailVm.title.rated}}</p>
-         <p><b>Released:</b>{{titleDetailVm.title.released}}</p>
-         <p><b>Runtime:</b>{{titleDetailVm.title.runtime}}</p>
-         <p><b>Genre:</b>{{titleDetailVm.title.genre}}</p>
-         <p><b>Director:</b>{{titleDetailVm.title.director}}</p>
-         <p><b>Writer:</b>{{titleDetailVm.title.writer}}</p>
-         <p><b>Actors:</b>{{titleDetailVm.title.actors}}</p>
-         <p><b>Plot:</b>{{titleDetailVm.title.plot}}</p>
-         <p><b>Language:</b>{{titleDetailVm.title.language}}</p>
-         <p><b>Country:</b>{{titleDetailVm.title.country}}</p>
-         <p><b>Awards:</b>{{titleDetailVm.title.awards}}</p>
-         <p><b>Metascore:</b>{{titleDetailVm.title.metascore}}</p>
-         <p><b>imdbRating:</b>{{titleDetailVm.title.imdbRating}}</p>
-         <p><b>imdbVotes:</b>{{titleDetailVm.title.imdbVotes}}</p>
-         <p><b>imdbID:</b>{{titleDetailVm.title.imdbID}}</p>
-        <p><b>Type:</b>{{titleDetailVm.title.type}}</p>
-  <!--  &lt;!&ndash;    &lt;!&ndash;        <i  ng-click="titlesVm.remove(title.titleId)" class="glyphicon glyphicon-trash"></i></button>
-                <a ng-href="#/addtitle" ng-click="titlesVm.edit(title.titleId)"><i  class="glyphicon glyphicon-pencil"></i></a>&ndash;&gt;
-        &lt;!&ndash; <button type="button" ng-click="ctrl.edit(u.id)" class="btn btn-success custom-width">Edit</button>
-         <button type="button" ng-click="ctrl.remove(u.id)" class="btn btn-danger custom-width">Remove</button>&ndash;&gt;&ndash;&gt;-->
-    </div>
+<div class="col-sm-9" id="details">
+<fieldset>
+<legend>Details:</legend>
+    <h4>{{titleDetailVm.title.title}}</h4>
+        <table>
+            <tr>
+                <td><b>Year:</b></td>
+                <td>{{titleDetailVm.title.year}}</td>
+            </tr>
+            <tr>
+                <td><b>Rated:</b></td>
+                <td>{{titleDetailVm.title.rated}}</td>
+            </tr>
+            <tr>
+                <td><b>Released:</b></td>
+                <td>{{titleDetailVm.title.released}}</td>
+            </tr>
+            <tr>
+                <td><b>Runtime:</b></td>
+                <td>{{titleDetailVm.title.runtime}}</td>
+            </tr>
+            <tr>
+                <td><b>Genre:</b></td>
+                <td>{{titleDetailVm.title.genre}}</td>
+            </tr>
+            <tr>
+                <td><b>Director:</b></td>
+                <td>{{titleDetailVm.title.director}}</td>
+            </tr>
+            <tr>
+                <td><b>Writer:</b></td>
+                <td>{{titleDetailVm.title.writer}}</td>
+            </tr>
+            <tr>
+                <td><b>Actors:</b></td>
+                <td>{{titleDetailVm.title.actors}}</td>
+            </tr>
+            <tr>
+                <td><b>Plot:</b></td>
+                <td>{{titleDetailVm.title.plot}}</td>
+            </tr>
+            <tr>
+                <td><b>Language:</b></td>
+                <td>{{titleDetailVm.title.language}}</td>
+            </tr>
+            <tr>
+                <td><b>Country:</b></td>
+                <td>{{titleDetailVm.title.country}}</td>
+            </tr>
+            <tr>
+                <td><b>Awards:</b></td>
+                <td>{{titleDetailVm.title.awards}}</td>
+            </tr>
+            <tr>
+                <td><b>Metascore:</b></td>
+                <td>{{titleDetailVm.title.metascore}}</td>
+            </tr>
+            <tr>
+                <td><b>imdbRating:</b></td>
+                <td>{{titleDetailVm.title.imdbRating}}</td>
+            </tr>
+            <tr>
+                <td><b>imdbVotes:</b></td>
+                <td>{{titleDetailVm.title.imdbVotes}}</td>
+            </tr>
+            <tr>
+                <td><b>imdbID:</b></td>
+                <td>{{titleDetailVm.title.imdbID}}</td>
+            </tr>
+            <tr>
+                <td><b>Type:</b></td>
+                <td>{{titleDetailVm.title.type}}</td>
+            </tr>
+
+
+        </table>
+</fieldset>
+</div>
+</div>

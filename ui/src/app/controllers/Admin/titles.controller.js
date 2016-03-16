@@ -18,6 +18,8 @@
                 .then(
                     function(d) {
                         console.log(d);
+                        titlesVm.currentPage=1;
+                        titlesVm.totalItems=d.length;
                         titlesVm.titles = d;
                     },
                     function(errResponse){
@@ -25,25 +27,11 @@
                     }
                 );
         };
-
-        /*    titlesVm.getTitleById = function(titleId){
-                titleService.getTitleById($routeParams.titleId)
-                    .then(
-                        function(d) {
-                            titlesVm.title = d;
-                        },
-                        function(errResponse){
-                            console.error('Error while fetching Currencies');
-                        }
-                    );
-            };*/
-
             titlesVm.addTitle = function(title){
                 console.log(title);
                 titleService.addTitle(title)
                     .then(function(data){
                         titlesVm.title=data;
-
                             console.log(data);
                         },
                         function(errResponse){
@@ -63,8 +51,6 @@
                         }
                     );
             };
-
-
         titlesVm.deleteTitle = function(title){
             console.log(title);
             titleService.deleteTitle(title)
@@ -82,7 +68,6 @@
             titlesVm.submit = function(){
                 console.log(titlesVm.title);
                 if(!titlesVm.title.titleId){
-                    console.log('add calls');
                     titlesVm.addTitle(titlesVm.title);
                 }
                 else{
@@ -99,16 +84,8 @@
 
 
             titlesVm.remove = function(title){
-            console.log('id to be deleted', title);
             titlesVm.deleteTitle(title);
         };
-
-
-        /*titlesVm.reset = function(){
-            titlesVm.title={titleId: null};
-            $scope.titleForm.$setPristine(); //reset Form
-        };*/
-
     }]);
 
 })();

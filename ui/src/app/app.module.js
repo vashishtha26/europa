@@ -19,16 +19,21 @@
             controller:'TitleDetailController',
             controllerAs: 'titleDetailVm'
         })
-     /* .when('/users/:id', {
-        templateUrl: 'app/views/user-detail.tmpl.html',
-        controller: 'UserDetailController',
-        controllerAs: 'userDetailVm'
-      })
-      .when('/photos', {
-        templateUrl: 'app/views/photos.tmpl.html',
-        controller: 'PhotosController',
-        controllerAs: 'photosVm'
-      })*/
+          .when('/titles/type/',{
+            templateUrl:'app/views/User/viewtitles.tmpl.html',
+            controller:'UserViewController',
+            controllerAs: 'userViewVm'
+        })
+        .when('/titles/genre/',{
+            templateUrl:'app/views/User/viewtitles.tmpl.html',
+            controller:'UserViewController',
+            controllerAs: 'userViewVm'
+        })
+        .when('/titles/year/',{
+            templateUrl:'app/views/User/viewtitles.tmpl.html',
+            controller:'UserViewController',
+            controllerAs: 'userViewVm'
+        })
       .otherwise({
         redirectTo: '/titles'
       });
