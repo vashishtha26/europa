@@ -18,6 +18,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
     
+    
+    //config
     public void addCorsMappings(CorsRegistry registry) {
     	registry.addMapping("/*")
 		.allowedOrigins("*")
