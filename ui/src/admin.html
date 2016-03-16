@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="europa">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Europa- admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/Admin/home.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+</head>
+<body>
+
+
+ <header ng-include="'app/views/Admin/header-admin.tmpl.html'">
+  </header>
+  <section>
+      <div class="container">
+    <div class="container-fluid" ng-controller="TitlesController as titlesVm">
+      <div class="col-sm-6" ng-include="'app/views/Admin/addtitle.tmpl.html'"></div>
+    <div class="col-sm-6" ng-include="'app/views/Admin/titles.tmpl.html'"></div>
+    </div>
+      </div>
+  </section>
+  <footer ng-include="'app/views/Admin/footer-admin.tmpl.html'">
+  </footer>
+<script src="https://code.angularjs.org/1.4.9/angular.js"></script>
+<script src="https://code.angularjs.org/1.4.9/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.1/ui-bootstrap-tpls.min.js"></script>
+<script src="app/app-admin.module.js"></script>
+<script src="app/app.constant.js"></script>
+<script src="app/controllers/Admin/titles.controller.js"></script>
+<script src="app/services/title.service.js"></script>
+<script src="app/controllers/User/header.controller.js"></script>
+</body>
+
+</html>

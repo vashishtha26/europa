@@ -1,0 +1,16 @@
+<div class="cotainer-fluid">
+<div class="thumbnail" ng-repeat="title in titlesVm.titles | limitTo:7:(titlesVm.currentPage*7)">
+    <div class="caption">
+        <h4>{{title.title}}</h4>
+        <p><b>Year:</b>{{title.year}}</p>
+        <p><b>Type:</b>{{title.type}}</p>
+        <p><b>Genre:</b>{{title.genre}}</p>
+       <i  ng-click="titlesVm.remove(title.titleId)" class="glyphicon glyphicon-trash"></i>
+       <i ng-click="titlesVm.edit(title)" class="glyphicon glyphicon-pencil" ></i>
+    </div>
+</div>
+<div>
+        <uib-pagination max-size="2" rotate="false" total-items="titlesVm.totalItems"
+                   items-per-page="7" ng-model="titlesVm.currentPage"></uib-pagination>
+</div>
+</div>

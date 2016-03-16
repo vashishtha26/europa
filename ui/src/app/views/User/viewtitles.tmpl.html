@@ -1,0 +1,40 @@
+<div class="container-fluid">
+<div id="search">
+
+    <fieldset>
+        <legend>Sort:</legend>
+        <label> Sort by:</label>
+            <button id="sort" ng-click="userViewVm.sortByYear()">sort by year</button>
+            <button id="sort" ng-click="userViewVm.sortByImdbRating()">sort by imdbRating</button>
+            <button id="sort" ng-click="userViewVm.sortByImdbVotes()">sort by imdbVotes</button>
+        <!--<i class="glyphicon glyphicon-search"></i>-->
+            <hr/>
+           <!-- <label>Search by:</label>
+            <button id="find" ng-click="userViewVm.findByYear({{userViewVm.titles.year}})">search by year</button>
+            <button id="find" ng-click="userViewVm.findByGenre({{userViewVm.titles.genre}})">search by genre</button>
+            <button id="find" ng-click="userViewVm.findByType({{userViewVm.titles.type}})">search by type</button>
+            <hr>-->
+    </fieldset>
+</div>
+<br/>
+<br/>
+
+<div class="thumbnail" ng-repeat="title in userViewVm.titles | limitTo:6:(userViewVm.currentPage*6)">
+    <a href="#/titles/{{title.titleId}}" ng-click="userViewVm.getTitles()"><img ng-src="{{title.poster}}" alt="poster not available" ng-click="title-detail.tmpl.html"></a>
+    <div class="caption">
+        <h4>{{title.title}}</h4>
+        <p><b>imdbRatings:</b>{{title.imdbRating}}</p>
+        <p><b>imdbVotes:</b>{{title.imdbVotes}}</p>
+        <p><b>Year:</b>{{title.year}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <uib-pagination total-items="userViewVm.totalItems"
+               items-per-page="6"
+               ng-model="userViewVm.currentPage"
+                    max-size="2" rotate="false">
+
+    </uib-pagination>
+    </div>
+</div>
